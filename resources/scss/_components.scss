@@ -52,3 +52,45 @@
         color:#fff;
     }
 }
+
+
+.devicons{
+    font-family: "devicon";
+    font-size: 5rem;
+
+    &__js::before{
+        content:"\e681";
+        color:#f4d135;
+        font-size: 4.6rem;
+        margin:8px;
+    }
+
+    &__html::before{
+        content:"\e636";
+        color:#ea6336;
+    }
+
+    &__css:before{
+        content:"\e649";
+        color:#27a3da;
+    }
+}
+
+.quote{
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 1.1;
+
+    :not(:nth-child(2n)):before{
+        content: open-quote;
+    }
+
+    :not(:nth-child(2n)):after{
+        content: close-quote;
+    }
+}
+
+
+
+
+

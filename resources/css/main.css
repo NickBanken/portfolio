@@ -65,7 +65,7 @@ html {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px; } }
+    max-width: 1240px; } }
 
 .container-fluid {
   width: 100%;
@@ -2856,14 +2856,7 @@ html {
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-top: 25%;
-    font-size: 5rem;
-    font-weight: 100;
-    line-height: 1.1; }
-    .header__quote :before {
-      content: open-quote; }
-    .header__quote :after {
-      content: close-quote; }
+    margin-top: 25%; }
   .header__title {
     font-weight: 500;
     font-size: 5rem;
@@ -2885,18 +2878,101 @@ html {
   padding-bottom: 10rem; }
   .bio .container {
     transform: skewY(4deg); }
+  .bio__row {
+    margin-bottom: 8rem; }
   .bio__about {
     font-size: 1.6rem;
     padding: 4rem;
     margin-bottom: 3rem;
     border-radius: 5px;
-    background-color: white;
-    box-shadow: 0px 10px 1rem 0px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0px 10px 1rem 0px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-grey-light-2);
+    transform: translateY(0);
+    transition: all .5s ease-in-out; }
+    .bio__about:hover {
+      background-color: var(--color-grey-light-1);
+      transform: translateY(-10px);
+      box-shadow: 0px 15px 2rem 0px rgba(0, 0, 0, 0.15); }
 
 .portfolio {
-  color: var(--color-grey-dark-1); }
+  color: var(--color-grey-dark-1);
+  background-color: #fff;
+  margin-bottom: 20rem; }
   .portfolio__wrapper {
-    margin-bottom: 8rem; }
+    width: 60rem;
+    height: 40rem;
+    margin-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1%;
+    z-index: 100; }
+  .portfolio__wrapper:hover .portfolio__image {
+    transform: translateX(20rem) translateY(0rem) scale(1);
+    filter: blur(1px) brightness(0.5);
+    backface-visibility: hidden; }
+  .portfolio__image {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all .5s; }
+  .portfolio__description {
+    position: absolute;
+    top: 0;
+    transform: translateX(-30rem);
+    background-color: var(--color-grey-light-1);
+    padding: 4rem;
+    width: 30rem;
+    height: 100%;
+    transition: all .5s;
+    color: var(--color-grey-dark-1); }
+    .portfolio__description__title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--color-primary-light);
+      text-transform: uppercase; }
+    .portfolio__description__para {
+      font-size: 1.4rem;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--color-primary-light); }
+    .portfolio__description__logos {
+      transform-origin: top;
+      transform: scaleY(0) translateY(-10rem);
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      transition-delay: .35s;
+      transition-property: all;
+      transition-duration: .4s; }
+  .portfolio__wrapper:hover .portfolio__description {
+    transform: translateX(0rem); }
+    .portfolio__wrapper:hover .portfolio__description__logos {
+      transform: scaleY(1);
+      opacity: 1; }
+
+.motivation {
+  position: relative;
+  height: 70vh; }
+
+.parallax {
+  background: url(../images/bg-quote-1-large.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(1);
+  top: 0;
+  left: 0; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(34, 19, 117, 0.32), rgba(34, 19, 117, 0.4));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; }
 
 .section__wrap {
   position: relative; }
@@ -2934,3 +3010,27 @@ html {
   border: none;
   border-radius: 5px;
   color: #fff; }
+
+.devicons {
+  font-family: "devicon";
+  font-size: 5rem; }
+  .devicons__js::before {
+    content: "\e681";
+    color: #f4d135;
+    font-size: 4.6rem;
+    margin: 8px; }
+  .devicons__html::before {
+    content: "\e636";
+    color: #ea6336; }
+  .devicons__css:before {
+    content: "\e649";
+    color: #27a3da; }
+
+.quote {
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 1.1; }
+  .quote :not(:nth-child(2n)):before {
+    content: open-quote; }
+  .quote :not(:nth-child(2n)):after {
+    content: close-quote; }
