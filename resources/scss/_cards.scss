@@ -175,6 +175,7 @@
     position: absolute;
     top:0;
     left:0;
+    width: 100%;
 }
 
 .card{
@@ -183,7 +184,7 @@
         position: relative;
         padding:8rem 5rem 2rem 5rem;
         background-color: white;;
-        height:40rem;
+        
         box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.315);
         border-radius: 20px;
 
@@ -220,9 +221,10 @@
         
         
         &:hover{
-            transform: translateY(-5rem);
+            // transform: translateY(-5rem);
+            
+            transition: all .5s ease-in-out;
             height:80%;
-            transition: all .5s;
             padding:8rem 5rem 15rem 5rem;
             z-index: 100;
             .skills__para{
@@ -374,6 +376,8 @@
     }
 
     &--php{
+        color:var(--color-php);
+        font-size: 1rem;
         &:after,&:before{
             background: linear-gradient(to right, var(--color-php) , #7ea0d6);
         }
