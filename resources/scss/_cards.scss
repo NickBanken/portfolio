@@ -152,81 +152,47 @@
     font-size:2.7rem;
     }
 
-    .svg-icons--sm{
-        font-family: "devicon";
-        font-size:2rem;
-        }
-
-.card__holder{
-    display: inline-block;
+.svg-icons--sm{
+    font-family: "devicon";
+    font-size:2rem;
 }
 
-.card__test{
+
+.card__holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card__outer{
     width: 40rem;
     display: inline-block;
-    margin-bottom: -100rem;
+    position: relative;
+    height:30rem;
+}
+
+.card__inner{
+    position: absolute;
+    top:0;
+    left:0;
 }
 
 .card{
     &__skills{
         transition: all .4s;
         position: relative;
-        padding:8rem 5rem 8rem 5rem;
-        height:37rem;
+        padding:8rem 5rem 2rem 5rem;
+        background-color: white;;
+        height:40rem;
         box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.315);
         border-radius: 20px;
+
+        
         h3{
             font-size: 2rem;
             text-align: center;
             font-weight: 600;
             margin: 1rem 0;
-        }
-
-        .skills__para{
-            padding: 1rem 0;
-            color: var(--color-grey-dark-1);
-            font-size: 1.3rem;
-            text-align: justify;
-            text-justify: inter-word;
-            
-            &--html{
-                border-top: 2px solid var(--color-html);
-                border-bottom: 2px solid var(--color-html);
-            }
-            &--css{
-                border-top: 2px solid var(--color-css);
-                border-bottom: 2px solid var(--color-css);
-            }
-
-            &--sass{
-                border-top: 2px solid var(--color-sass);
-                border-bottom: 2px solid var(--color-sass);
-            }
-
-            &--js{
-                border-top: 2px solid var(--color-js);
-                border-bottom: 2px solid var(--color-js);
-            }
-
-            &--vue{
-                border-top: 2px solid var(--color-vue);
-                border-bottom: 2px solid var(--color-vue);
-            }
-
-            &--jquery{
-                border-top: 2px solid var(--color-jquery);
-                border-bottom: 2px solid var(--color-jquery);
-            }
-
-            &--git{
-                border-top: 2px solid var(--color-git);
-                border-bottom: 2px solid var(--color-git);
-            }
-
-            &--php{
-                border-top: 2px solid var(--color-php);
-                border-bottom: 2px solid var(--color-php);
-            }
         }
 
         &:after,&:before{
@@ -252,96 +218,16 @@
             border-top-left-radius: 3px;
         }
         
-        &--html:after,&--html:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-html) , rgb(255, 200, 48));
-            
-        }
-
-        &--css:after,&--css:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-css) , rgb(125, 168, 255));
-            
-        }
-
-        &--sass:after,&--sass:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-sass) , rgb(230, 118, 205));
-            
-        }
-
-        &--js:after,&--js:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-js) , rgb(255, 252, 90));
-            
-        }
-
-        &--vue:after,&--vue:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-vue) , rgb(87, 255, 110));
-            
-        }
-
-        &--jquery:after,&--jquery:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-jquery) , #2f88fd);
-            
-        }
-
-        &--git:after,&--git:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-git) , #ff7259);
-        }
-
-        &--php:after,&--php:before {
-            content: '';
-            background: linear-gradient(to right, var(--color-php) , #7ea0d6);
-        }
-         
-
-        &--html{
-            color:var(--color-html);
-        }
-
-        &--css{
-            color:var(--color-css);
-        }
-
-        &--sass{
-            color:var(--color-sass);
-        }
-
-        &--js{
-            color:var(--color-js);
-            font-size: 1rem;
-        }
-
-        &--vue{
-            color:var(--color-vue);
-            font-size: 1rem;
-        }
-
-        &--jquery{
-            color:var(--color-jquery);
-            font-size: 1rem;
-        }
-
-        &--git{
-            color:var(--color-git);
-            font-size: 1rem;
-        }
-
-        &--php{
-            color:var(--color-php);
-        }
-
+        
         &:hover{
             transform: translateY(-5rem);
             height:80%;
             transition: all .5s;
-            padding:8rem 5rem 20rem 5rem;
+            padding:8rem 5rem 15rem 5rem;
+            z-index: 100;
             .skills__para{
                 transform: scaleY(1);
+                opacity: 1;
 
             }
         }
@@ -349,9 +235,10 @@
 }
 
 .skills__para{
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: all .5s;
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: all .8s;
+    opacity: 0;
 }
 
 .card__container{
@@ -380,6 +267,117 @@
     top:230px;
     left:50%;
     transform: translateX(-50%);
+}
+
+.skills__para{
+    padding: 1rem 0;
+    color: var(--color-grey-dark-1);
+    font-size: 1.3rem;
+    text-align: justify;
+    text-justify: inter-word;
+    
+    &--html{
+        border-top: 2px solid var(--color-html);
+        border-bottom: 2px solid var(--color-html);
+    }
+    &--css{
+        border-top: 2px solid var(--color-css);
+        border-bottom: 2px solid var(--color-css);
+    }
+
+    &--sass{
+        border-top: 2px solid var(--color-sass);
+        border-bottom: 2px solid var(--color-sass);
+    }
+
+    &--js{
+        border-top: 2px solid var(--color-js);
+        border-bottom: 2px solid var(--color-js);
+    }
+
+    &--vuejs{
+        border-top: 2px solid var(--color-vuejs);
+        border-bottom: 2px solid var(--color-vuejs);
+    }
+
+    &--jquery{
+        border-top: 2px solid var(--color-jquery);
+        border-bottom: 2px solid var(--color-jquery);
+    }
+
+    &--git{
+        border-top: 2px solid var(--color-git);
+        border-bottom: 2px solid var(--color-git);
+    }
+
+    &--php{
+        border-top: 2px solid var(--color-php);
+        border-bottom: 2px solid var(--color-php);
+    }
+}
+
+.card__skills{
+
+    &--html{
+        color:var(--color-html);
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-html) , rgb(255, 200, 48));
+        }
+    }
+
+    &--css{
+        color:var(--color-css);
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-css) , rgb(125, 168, 255));
+        }
+    }
+
+    &--sass{
+        color:var(--color-sass);
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-sass) , rgb(230, 118, 205));
+        }
+    }
+
+    &--js{
+        color:var(--color-js);
+        font-size: 1rem;
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-js) , rgb(255, 252, 90));
+        }
+    }
+
+    &--vuejs{
+        color:var(--color-vuejs);
+        font-size: 1rem;
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-vuejs) , rgb(87, 255, 110));
+        }
+    }
+
+    &--jquery{
+        color:var(--color-jquery);
+        font-size: 1rem;
+
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-jquery) , #2f88fd);
+        }
+    }
+
+    &--git{
+        color:var(--color-git);
+        font-size: 1rem;
+
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-git) , #ff7259);
+        }
+    }
+
+    &--php{
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-php) , #7ea0d6);
+        }
+    }
 }
 
 

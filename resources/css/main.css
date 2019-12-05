@@ -14,8 +14,10 @@
   --color-css: #2284cd;
   --color-sass: #cf6499;
   --color-js: #f4d135;
-  --color-vue:#41b883 ;
-  --color-jquery:#0069af; }
+  --color-vuejs:#41b883 ;
+  --color-jquery:#0069af;
+  --color-git: #f25038;
+  --color-php: #6181b5; }
 
 * {
   padding: 0;
@@ -3104,6 +3106,12 @@ html {
 .circular-chart--dblue .circle {
   stroke: var(--color-jquery); }
 
+.circular-chart--tomato .circle {
+  stroke: var(--color-git); }
+
+.circular-chart--php .circle {
+  stroke: var(--color-php); }
+
 .svg-icons {
   font-family: "devicon";
   font-size: 2.7rem; }
@@ -3112,42 +3120,35 @@ html {
   font-family: "devicon";
   font-size: 2rem; }
 
+.card__holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.card__outer {
+  width: 40rem;
+  display: inline-block;
+  position: relative;
+  height: 30rem; }
+
+.card__inner {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 .card__skills {
   transition: all .4s;
   position: relative;
-  padding: 10rem 5rem;
+  padding: 8rem 5rem 2rem 5rem;
+  background-color: white;
+  height: 40rem;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.315);
-  height: 100%;
   border-radius: 20px; }
   .card__skills h3 {
     font-size: 2rem;
     text-align: center;
     font-weight: 600;
     margin: 1rem 0; }
-  .card__skills .skills__para {
-    padding: 1rem 0;
-    color: var(--color-grey-dark-1);
-    font-size: 1.3rem;
-    text-align: justify;
-    text-justify: inter-word; }
-    .card__skills .skills__para--html {
-      border-top: 2px solid var(--color-html);
-      border-bottom: 2px solid var(--color-html); }
-    .card__skills .skills__para--css {
-      border-top: 2px solid var(--color-css);
-      border-bottom: 2px solid var(--color-css); }
-    .card__skills .skills__para--sass {
-      border-top: 2px solid var(--color-sass);
-      border-bottom: 2px solid var(--color-sass); }
-    .card__skills .skills__para--js {
-      border-top: 2px solid var(--color-js);
-      border-bottom: 2px solid var(--color-js); }
-    .card__skills .skills__para--vue {
-      border-top: 2px solid var(--color-vue);
-      border-bottom: 2px solid var(--color-vue); }
-    .card__skills .skills__para--jquery {
-      border-top: 2px solid var(--color-jquery);
-      border-bottom: 2px solid var(--color-jquery); }
   .card__skills:after, .card__skills:before {
     content: "";
     display: block;
@@ -3165,41 +3166,21 @@ html {
     position: absolute;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px; }
-  .card__skills--html:after, .card__skills--html:before {
-    content: '';
-    background: linear-gradient(to right, var(--color-html), #ffc830); }
-  .card__skills--css:after, .card__skills--css:before {
-    content: '';
-    background: linear-gradient(to right, var(--color-css), #7da8ff); }
-  .card__skills--sass:after, .card__skills--sass:before {
-    content: '';
-    background: linear-gradient(to right, var(--color-sass), #e676cd); }
-  .card__skills--js:after, .card__skills--js:before {
-    content: '';
-    background: linear-gradient(to right, var(--color-js), #fffc5a); }
-  .card__skills--vue:after, .card__skills--vue:before {
-    content: '';
-    background: linear-gradient(to right, var(--color-vue), #57ff6e); }
-  .card__skills--jquery:after, .card__skills--jquery:before {
-    content: '';
-    background: linear-gradient(to right, var(--color-jquery), #2f88fd); }
-  .card__skills--html {
-    color: var(--color-html); }
-  .card__skills--css {
-    color: var(--color-css); }
-  .card__skills--sass {
-    color: var(--color-sass); }
-  .card__skills--js {
-    color: var(--color-js);
-    font-size: 1rem; }
-  .card__skills--vue {
-    color: var(--color-vue);
-    font-size: 1rem; }
-  .card__skills--jquery {
-    color: var(--color-jquery);
-    font-size: 1rem; }
   .card__skills:hover {
-    transform: translateY(-5rem); }
+    transform: translateY(-5rem);
+    height: 80%;
+    transition: all .5s;
+    padding: 8rem 5rem 15rem 5rem;
+    z-index: 100; }
+    .card__skills:hover .skills__para {
+      transform: scaleY(1);
+      opacity: 1; }
+
+.skills__para {
+  transform: scaleY(1);
+  transform-origin: left;
+  transition: all .8s;
+  opacity: 0; }
 
 .card__container {
   position: relative; }
@@ -3222,3 +3203,76 @@ html {
   top: 230px;
   left: 50%;
   transform: translateX(-50%); }
+
+.skills__para {
+  padding: 1rem 0;
+  color: var(--color-grey-dark-1);
+  font-size: 1.3rem;
+  text-align: justify;
+  text-justify: inter-word; }
+  .skills__para--html {
+    border-top: 2px solid var(--color-html);
+    border-bottom: 2px solid var(--color-html); }
+  .skills__para--css {
+    border-top: 2px solid var(--color-css);
+    border-bottom: 2px solid var(--color-css); }
+  .skills__para--sass {
+    border-top: 2px solid var(--color-sass);
+    border-bottom: 2px solid var(--color-sass); }
+  .skills__para--js {
+    border-top: 2px solid var(--color-js);
+    border-bottom: 2px solid var(--color-js); }
+  .skills__para--vuejs {
+    border-top: 2px solid var(--color-vuejs);
+    border-bottom: 2px solid var(--color-vuejs); }
+  .skills__para--jquery {
+    border-top: 2px solid var(--color-jquery);
+    border-bottom: 2px solid var(--color-jquery); }
+  .skills__para--git {
+    border-top: 2px solid var(--color-git);
+    border-bottom: 2px solid var(--color-git); }
+  .skills__para--php {
+    border-top: 2px solid var(--color-php);
+    border-bottom: 2px solid var(--color-php); }
+
+.card__skills--html {
+  color: var(--color-html); }
+  .card__skills--html:after, .card__skills--html:before {
+    background: linear-gradient(to right, var(--color-html), #ffc830); }
+
+.card__skills--css {
+  color: var(--color-css); }
+  .card__skills--css:after, .card__skills--css:before {
+    background: linear-gradient(to right, var(--color-css), #7da8ff); }
+
+.card__skills--sass {
+  color: var(--color-sass); }
+  .card__skills--sass:after, .card__skills--sass:before {
+    background: linear-gradient(to right, var(--color-sass), #e676cd); }
+
+.card__skills--js {
+  color: var(--color-js);
+  font-size: 1rem; }
+  .card__skills--js:after, .card__skills--js:before {
+    background: linear-gradient(to right, var(--color-js), #fffc5a); }
+
+.card__skills--vuejs {
+  color: var(--color-vuejs);
+  font-size: 1rem; }
+  .card__skills--vuejs:after, .card__skills--vuejs:before {
+    background: linear-gradient(to right, var(--color-vuejs), #57ff6e); }
+
+.card__skills--jquery {
+  color: var(--color-jquery);
+  font-size: 1rem; }
+  .card__skills--jquery:after, .card__skills--jquery:before {
+    background: linear-gradient(to right, var(--color-jquery), #2f88fd); }
+
+.card__skills--git {
+  color: var(--color-git);
+  font-size: 1rem; }
+  .card__skills--git:after, .card__skills--git:before {
+    background: linear-gradient(to right, var(--color-git), #ff7259); }
+
+.card__skills--php:after, .card__skills--php:before {
+  background: linear-gradient(to right, var(--color-php), #7ea0d6); }

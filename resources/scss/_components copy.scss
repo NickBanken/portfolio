@@ -157,16 +157,6 @@
         font-size:2rem;
         }
 
-.card__holder{
-    display: inline-block;
-}
-
-.card__test{
-    width: 40rem;
-    display: inline-block;
-    margin-bottom: -100rem;
-}
-
 .card{
     &__skills{
         transition: all .4s;
@@ -208,9 +198,9 @@
                 border-bottom: 2px solid var(--color-js);
             }
 
-            &--vue{
-                border-top: 2px solid var(--color-vue);
-                border-bottom: 2px solid var(--color-vue);
+            &--vuejs{
+                border-top: 2px solid var(--color-vuejs);
+                border-bottom: 2px solid var(--color-vuejs);
             }
 
             &--jquery{
@@ -276,9 +266,9 @@
             
         }
 
-        &--vue:after,&--vue:before {
+        &--vuejs:after,&--vuejs:before {
             content: '';
-            background: linear-gradient(to right, var(--color-vue) , rgb(87, 255, 110));
+            background: linear-gradient(to right, var(--color-vuejs) , rgb(87, 255, 110));
             
         }
 
@@ -316,8 +306,8 @@
             font-size: 1rem;
         }
 
-        &--vue{
-            color:var(--color-vue);
+        &--vuejs{
+            color:var(--color-vuejs);
             font-size: 1rem;
         }
 
