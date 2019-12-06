@@ -17,7 +17,10 @@
   --color-vuejs:#41b883 ;
   --color-jquery:#0069af;
   --color-git: #f25038;
-  --color-php: #6181b5; }
+  --color-php: #6181b5;
+  --color-unity:#292929;
+  --color-photoshop:#80b5e2;
+  --color-ai:#fc7d3a; }
 
 * {
   padding: 0;
@@ -41,7 +44,7 @@ body {
   perspective: 1px;
   transform-style: preserve-3d;
   overflow-x: hidden;
-  overflow-y: auto; }
+  overflow-y: visible; }
 
 /*!
  * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
@@ -2976,20 +2979,18 @@ html {
   justify-content: center;
   box-sizing: border-box;
   position: relative;
-  transform-style: preserve-3d;
-  z-index: -1; }
+  z-index: -70; }
 
-.parallax-wrapper::before {
+.parallax-wrapper::after {
   content: '';
   width: 100vw;
   height: 100vh;
-  top: 0;
-  left: 0;
+  backface-visibility: hidden;
   background-image: url(../images/bg-quote-1-large.jpg);
   background-position: center;
   background-size: cover;
   position: absolute;
-  z-index: -1;
+  z-index: -100;
   transform: translateZ(-1px) scale(2); }
 
 .content {
@@ -3002,6 +3003,289 @@ html {
 .parallax-quote {
   width: 100rem;
   z-index: 20; }
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  filter: drop-shadow(6px -2px 2px rgba(50, 50, 0, 0.3)); }
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8; }
+
+.circle {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards; }
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100; } }
+
+.circular-chart--orange .circle {
+  stroke: #ff9f00; }
+
+.circular-chart--green .circle {
+  stroke: #4CC790; }
+
+.circular-chart--blue .circle {
+  stroke: var(--color-css); }
+
+.circular-chart--pink .circle {
+  stroke: var(--color-sass); }
+
+.circular-chart--yellow .circle {
+  stroke: var(--color-js); }
+
+.circular-chart--dblue .circle {
+  stroke: var(--color-jquery); }
+
+.circular-chart--tomato .circle {
+  stroke: var(--color-git); }
+
+.circular-chart--php .circle {
+  stroke: var(--color-php); }
+
+.circular-chart--unity .circle {
+  stroke: var(--color-unity); }
+
+.circular-chart--jquery .circle {
+  stroke: var(--color-jquery); }
+
+.circular-chart--photoshop .circle {
+  stroke: var(--color-photoshop); }
+
+.circular-chart--ai .circle {
+  stroke: var(--color-ai); }
+
+.svg-icons {
+  font-family: "devicon";
+  font-size: 2.7rem; }
+
+.card__holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.card__outer {
+  flex-basis: 30rem;
+  display: flex;
+  position: relative;
+  height: 35rem;
+  margin: 3rem;
+  flex-grow: 1;
+  transition-property: flex-grow,height;
+  transition-duration: .2s,.3s;
+  transition-delay: 0s,.2s; }
+  .card__outer:hover {
+    flex-grow: 50;
+    height: 45rem; }
+    .card__outer:hover .card__container {
+      width: 8rem;
+      margin: auto;
+      font-size: 4rem; }
+    .card__outer:hover .skills__para {
+      transform: scaleY(1);
+      opacity: 1; }
+    .card__outer:hover .currently {
+      font-size: .7rem;
+      width: 13rem;
+      top: 50px; }
+
+.card__skills {
+  transition-property: height,width;
+  transition-duration: .4s,.2s;
+  transition-delay: .2s,0s;
+  padding: 8rem 5rem 2rem 5rem;
+  background-color: var(--color-grey-light-1);
+  box-shadow: -5px 10px 40px 0px rgba(0, 0, 0, 0.315);
+  border-radius: 20px; }
+  .card__skills h3 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 0; }
+  .card__skills:after, .card__skills:before {
+    content: "";
+    display: block;
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; }
+  .card__skills:after {
+    bottom: 0;
+    left: 0%; }
+  .card__skills:before {
+    top: 0;
+    left: 0; }
+
+.skills__para {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition-property: opacity;
+  transition-duration: .6s;
+  transition-delay: .3s;
+  opacity: 0;
+  padding: 2rem 2rem;
+  color: var(--color-grey-dark-1);
+  font-size: 1.2rem; }
+
+.card__container {
+  width: 15rem;
+  margin: auto;
+  font-size: 8rem;
+  transition: all .5s;
+  position: relative; }
+
+.devicon {
+  position: absolute;
+  top: 51%;
+  left: 51%;
+  transform: translate(-50%, -50%); }
+
+.currently {
+  transition: all .5s;
+  background-color: var(--color-grey-light-1);
+  box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18rem; }
+
+.skills__para--html5 {
+  border-top: 2px solid var(--color-html);
+  border-bottom: 2px solid var(--color-html); }
+
+.skills__para--css3 {
+  border-top: 2px solid var(--color-css);
+  border-bottom: 2px solid var(--color-css); }
+
+.skills__para--sass {
+  border-top: 2px solid var(--color-sass);
+  border-bottom: 2px solid var(--color-sass); }
+
+.skills__para--javascript {
+  border-top: 2px solid var(--color-js);
+  border-bottom: 2px solid var(--color-js); }
+
+.skills__para--vuejs {
+  border-top: 2px solid var(--color-vuejs);
+  border-bottom: 2px solid var(--color-vuejs); }
+
+.skills__para--jquery {
+  border-top: 2px solid var(--color-jquery);
+  border-bottom: 2px solid var(--color-jquery); }
+
+.skills__para--git {
+  border-top: 2px solid var(--color-git);
+  border-bottom: 2px solid var(--color-git); }
+
+.skills__para--php {
+  border-top: 2px solid var(--color-php);
+  border-bottom: 2px solid var(--color-php); }
+
+.skills__para--laravel {
+  border-top: 2px solid var(--color-git);
+  border-bottom: 2px solid var(--color-git); }
+
+.skills__para--unity {
+  border-top: 2px solid var(--color-unity);
+  border-bottom: 2px solid var(--color-unity); }
+
+.skills__para--photoshop {
+  border-top: 2px solid var(--color-photoshop);
+  border-bottom: 2px solid var(--color-photoshop); }
+
+.skills__para--illustrator {
+  border-top: 2px solid var(--color-ai);
+  border-bottom: 2px solid var(--color-ai); }
+
+.card__skills--html5 {
+  color: var(--color-html); }
+  .card__skills--html5:after, .card__skills--html5:before {
+    background: linear-gradient(to right, var(--color-html), #ffc830); }
+
+.card__skills--css3 {
+  color: var(--color-css); }
+  .card__skills--css3:after, .card__skills--css3:before {
+    background: linear-gradient(to right, var(--color-css), #7da8ff); }
+
+.card__skills--sass {
+  color: var(--color-sass); }
+  .card__skills--sass:after, .card__skills--sass:before {
+    background: linear-gradient(to right, var(--color-sass), #e676cd); }
+
+.card__skills--javascript {
+  color: var(--color-js);
+  font-size: 1rem; }
+  .card__skills--javascript:after, .card__skills--javascript:before {
+    background: linear-gradient(to right, var(--color-js), #fffc5a); }
+
+.card__skills--vuejs {
+  color: var(--color-vuejs);
+  font-size: 1rem; }
+  .card__skills--vuejs:after, .card__skills--vuejs:before {
+    background: linear-gradient(to right, var(--color-vuejs), #57ff6e); }
+
+.card__skills--jquery {
+  color: var(--color-jquery);
+  font-size: 1rem; }
+  .card__skills--jquery:after, .card__skills--jquery:before {
+    background: linear-gradient(to right, var(--color-jquery), #2f88fd); }
+
+.card__skills--git {
+  color: var(--color-git);
+  font-size: 1rem; }
+  .card__skills--git:after, .card__skills--git:before {
+    background: linear-gradient(to right, var(--color-git), #ff7259); }
+
+.card__skills--php {
+  color: var(--color-php);
+  font-size: 1rem; }
+  .card__skills--php:after, .card__skills--php:before {
+    background: linear-gradient(to right, var(--color-php), #7ea0d6); }
+
+.card__skills--laravel {
+  color: var(--color-git);
+  font-size: 1rem; }
+  .card__skills--laravel:after, .card__skills--laravel:before {
+    background: linear-gradient(to right, var(--color-git), #ff7259); }
+
+.card__skills--unity {
+  color: var(--color-unity);
+  font-size: 1rem; }
+  .card__skills--unity:after, .card__skills--unity:before {
+    background: linear-gradient(to right, var(--color-unity), #474747); }
+
+.card__skills--photoshop {
+  color: var(--color-photoshop);
+  font-size: 1rem; }
+  .card__skills--photoshop:after, .card__skills--photoshop:before {
+    background: linear-gradient(to right, var(--color-photoshop), #cedfff); }
+
+.card__skills--illustrator {
+  color: var(--color-ai);
+  font-size: 1rem; }
+  .card__skills--illustrator:after, .card__skills--illustrator:before {
+    background: linear-gradient(to right, var(--color-ai), #ffbc7d); }
+
+.unity {
+  display: block;
+  text-indent: -9999px;
+  width: 60%;
+  height: 60%;
+  background: url(../images/unity.svg);
+  background-size: cover;
+  left: 50%; }
 
 .m-bottom-10 {
   margin-bottom: 10rem; }
@@ -3066,215 +3350,3 @@ html {
   top: 0;
   right: 0;
   position: absolute; }
-
-.circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-height: 150px;
-  filter: drop-shadow(6px -2px 2px rgba(50, 50, 0, 0.3)); }
-
-.circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 3.8; }
-
-.circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  animation: progress 1s ease-out forwards; }
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100; } }
-
-.circular-chart--orange .circle {
-  stroke: #ff9f00; }
-
-.circular-chart--green .circle {
-  stroke: #4CC790; }
-
-.circular-chart--blue .circle {
-  stroke: var(--color-css); }
-
-.circular-chart--pink .circle {
-  stroke: var(--color-sass); }
-
-.circular-chart--yellow .circle {
-  stroke: var(--color-js); }
-
-.circular-chart--dblue .circle {
-  stroke: var(--color-jquery); }
-
-.circular-chart--tomato .circle {
-  stroke: var(--color-git); }
-
-.circular-chart--php .circle {
-  stroke: var(--color-php); }
-
-.svg-icons {
-  font-family: "devicon";
-  font-size: 2.7rem; }
-
-.svg-icons--sm {
-  font-family: "devicon";
-  font-size: 2rem; }
-
-.card__holder {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.card__outer {
-  width: 40rem;
-  display: inline-block;
-  position: relative;
-  height: 30rem; }
-
-.card__inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; }
-
-.card__skills {
-  transition: all .4s;
-  position: relative;
-  padding: 8rem 5rem 2rem 5rem;
-  background-color: white;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.315);
-  border-radius: 20px; }
-  .card__skills h3 {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 600;
-    margin: 1rem 0; }
-  .card__skills:after, .card__skills:before {
-    content: "";
-    display: block;
-    height: 5rem;
-    width: 100%;
-    position: absolute; }
-  .card__skills:after {
-    bottom: 0;
-    left: 0%;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px; }
-  .card__skills:before {
-    top: 0;
-    left: 0;
-    position: absolute;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px; }
-  .card__skills:hover {
-    transition: all .5s ease-in-out;
-    height: 80%;
-    padding: 8rem 5rem 15rem 5rem;
-    z-index: 100; }
-    .card__skills:hover .skills__para {
-      transform: scaleY(1);
-      opacity: 1; }
-
-.skills__para {
-  transform: scaleY(1);
-  transform-origin: left;
-  transition: all .8s;
-  opacity: 0; }
-
-.card__container {
-  position: relative; }
-
-.devicon {
-  font-size: 8rem;
-  position: absolute;
-  top: 51%;
-  left: 51%;
-  transform: translate(-50%, -50%); }
-
-.currently {
-  background-color: var(--color-grey-light-1);
-  box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem;
-  position: absolute;
-  top: 230px;
-  left: 50%;
-  transform: translateX(-50%); }
-
-.skills__para {
-  padding: 1rem 0;
-  color: var(--color-grey-dark-1);
-  font-size: 1.3rem;
-  text-align: justify;
-  text-justify: inter-word; }
-  .skills__para--html {
-    border-top: 2px solid var(--color-html);
-    border-bottom: 2px solid var(--color-html); }
-  .skills__para--css {
-    border-top: 2px solid var(--color-css);
-    border-bottom: 2px solid var(--color-css); }
-  .skills__para--sass {
-    border-top: 2px solid var(--color-sass);
-    border-bottom: 2px solid var(--color-sass); }
-  .skills__para--js {
-    border-top: 2px solid var(--color-js);
-    border-bottom: 2px solid var(--color-js); }
-  .skills__para--vuejs {
-    border-top: 2px solid var(--color-vuejs);
-    border-bottom: 2px solid var(--color-vuejs); }
-  .skills__para--jquery {
-    border-top: 2px solid var(--color-jquery);
-    border-bottom: 2px solid var(--color-jquery); }
-  .skills__para--git {
-    border-top: 2px solid var(--color-git);
-    border-bottom: 2px solid var(--color-git); }
-  .skills__para--php {
-    border-top: 2px solid var(--color-php);
-    border-bottom: 2px solid var(--color-php); }
-
-.card__skills--html {
-  color: var(--color-html); }
-  .card__skills--html:after, .card__skills--html:before {
-    background: linear-gradient(to right, var(--color-html), #ffc830); }
-
-.card__skills--css {
-  color: var(--color-css); }
-  .card__skills--css:after, .card__skills--css:before {
-    background: linear-gradient(to right, var(--color-css), #7da8ff); }
-
-.card__skills--sass {
-  color: var(--color-sass); }
-  .card__skills--sass:after, .card__skills--sass:before {
-    background: linear-gradient(to right, var(--color-sass), #e676cd); }
-
-.card__skills--js {
-  color: var(--color-js);
-  font-size: 1rem; }
-  .card__skills--js:after, .card__skills--js:before {
-    background: linear-gradient(to right, var(--color-js), #fffc5a); }
-
-.card__skills--vuejs {
-  color: var(--color-vuejs);
-  font-size: 1rem; }
-  .card__skills--vuejs:after, .card__skills--vuejs:before {
-    background: linear-gradient(to right, var(--color-vuejs), #57ff6e); }
-
-.card__skills--jquery {
-  color: var(--color-jquery);
-  font-size: 1rem; }
-  .card__skills--jquery:after, .card__skills--jquery:before {
-    background: linear-gradient(to right, var(--color-jquery), #2f88fd); }
-
-.card__skills--git {
-  color: var(--color-git);
-  font-size: 1rem; }
-  .card__skills--git:after, .card__skills--git:before {
-    background: linear-gradient(to right, var(--color-git), #ff7259); }
-
-.card__skills--php {
-  color: var(--color-php);
-  font-size: 1rem; }
-  .card__skills--php:after, .card__skills--php:before {
-    background: linear-gradient(to right, var(--color-php), #7ea0d6); }

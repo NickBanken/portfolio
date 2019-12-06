@@ -1,161 +1,83 @@
-.m-bottom-10{
-    margin-bottom: 10rem;
-}
-
-.section{
-    &__wrap{    
-        position: relative;
-    }
-    &__title{
-        margin:12rem 0;
-        padding-bottom: 1rem;
-        font-size: 4rem;
-        text-align: center;
-        border-bottom: 3px solid var(--color-primary);
-        color: var(--color-grey-dark-1);
-    }
-
-    &__para{
-        color: var(--color-grey-dark-1);
-        position: absolute;
-        left:50%;
-        bottom: 29%;
-        transform: translate(-50%, -50%);
-
-        font-size: 1.5rem;
-        padding:.4rem;
-        border-right: 3px solid var(--color-primary);
-        border-left: 3px solid var(--color-primary);
-
-    }
-}
-
-.bg--1{
-    background-color: #fff;
-}
-
-.bg--2{
-    background-color: #ecf0f1;
-}
-
-
-.btn{
-    
-    &--primary{
-        
-        padding: 1.5rem 2.5rem;
-        margin-right: 2rem;
-
-        background-color: var(--color-primary-light);
-        font-size: 1.4rem;
-        font-weight: 500;
-
-        outline: none;
-        border: none;
-        border-radius: 5px;
-        color:#fff;
-    }
-}
-
-.quote{
-    font-size: 5rem;
-    font-weight: 100;
-    line-height: 1.1;
-
-    :not(:nth-child(2n)):before{
-        content: open-quote;
-    }
-
-    :not(:nth-child(2n)):after{
-        content: close-quote;
-    }
-}
-
-.artist-name{
-    margin-top: 30px;
-    font-size: 3rem;
-    text-align: end;
-}
-
-.vignette{
-    height: 100%;
-    width: 100%;
-    background: radial-gradient(  rgba(0, 0, 0, 0.37)10%, rgba(0, 0, 0, 0.842) 90%);
-    top:0;
-    right:0;
-    position: absolute;
-}
-
-  
-  .circular-chart {
+.circular-chart {
     display: block;
     margin: 10px auto;
-    max-height: 150px;
     filter: drop-shadow(6px -2px 2px rgba(50, 50, 0, 0.3));
   }
   
-  .circle-bg {
-    fill: none;
-    stroke: #eee;
-    stroke-width: 3.8;
-  }
+.circle-bg {
+fill: none;
+stroke: #eee;
+stroke-width: 3.8;
+}
+
+.circle {
+fill: none;
+stroke-width: 2.5;
+stroke-linecap: round;
+animation: progress 1s ease-out forwards;
+}
   
-  .circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
-  }
-  
-  @keyframes progress {
-    0% {
-      stroke-dasharray: 0 100;
+@keyframes progress {
+0% {
+    stroke-dasharray: 0 100;
+}
+}
+
+.circular-chart{
+    &--orange .circle {
+    stroke: #ff9f00;
+}
+
+    &--green .circle {
+        stroke: #4CC790;
     }
-  }
-  
-  .circular-chart{
-      &--orange .circle {
-        stroke: #ff9f00;
+
+    &--blue .circle {
+        stroke: var(--color-css);
     }
-  
-        &--green .circle {
-            stroke: #4CC790;
-        }
-  
-        &--blue .circle {
-            stroke: var(--color-css);
-        }
 
-        &--pink .circle{
-            stroke:var(--color-sass)
-        }
-
-        &--yellow .circle{
-            stroke:var(--color-js)
-        }
-
-        &--dblue .circle{
-            stroke:var(--color-jquery)
-        }
-
-        &--tomato .circle{
-            stroke:var(--color-git)
-        }
-
-        &--php .circle{
-            stroke:var(--color-php)
-        }
+    &--pink .circle{
+        stroke:var(--color-sass)
     }
+
+    &--yellow .circle{
+        stroke:var(--color-js)
+    }
+
+    &--dblue .circle{
+        stroke:var(--color-jquery)
+    }
+
+    &--tomato .circle{
+        stroke:var(--color-git)
+    }
+
+    &--php .circle{
+        stroke:var(--color-php)
+    }
+
+    &--unity .circle{
+        stroke:var(--color-unity)
+    }
+
+    &--jquery .circle{
+        stroke:var(--color-jquery)
+    }
+
+    &--photoshop .circle{
+        stroke:var(--color-photoshop)
+    }
+
+    &--ai .circle{
+        stroke:var(--color-ai)
+    }
+}
   
-  .svg-icons{
+.svg-icons{
     font-family: "devicon";
     font-size:2.7rem;
-    }
-
-.svg-icons--sm{
-    font-family: "devicon";
-    font-size:2rem;
 }
+
 
 
 .card__holder{
@@ -165,27 +87,49 @@
 }
 
 .card__outer{
-    width: 40rem;
-    display: inline-block;
+    flex-basis: 30rem;
+    display:flex;
     position: relative;
-    height:30rem;
+    height:35rem;
+    margin:3rem;
+    flex-grow: 1;
+
+    transition-property: flex-grow,height;
+    transition-duration: .2s,.3s;
+    transition-delay: 0s,.2s;
+
+    &:hover{
+        flex-grow:50;
+        height: 45rem;
+
+        .card__container{
+            width: 8rem;
+            margin:auto;
+            font-size: 4rem;
+        }
+        .skills__para{
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        .currently{
+            font-size: .7rem;
+            width: 13rem;
+            top:50px;
+        }
+    }
 }
 
-.card__inner{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-}
 
 .card{
     &__skills{
-        transition: all .4s;
-        position: relative;
+        transition-property: height,width;
+        transition-duration: .4s,.2s;
+        transition-delay: .2s,0s;
+
         padding:8rem 5rem 2rem 5rem;
-        background-color: white;;
-        
-        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.315);
+        background-color: var(--color-grey-light-1);  
+        box-shadow: -5px 10px 40px 0px rgba(0, 0, 0, 0.315);
         border-radius: 20px;
 
         
@@ -202,53 +146,48 @@
             height:5rem;
             width: 100%;
             position:absolute;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
         }
 
         &:after{
             bottom:0;
-            left:0%;
-            border-bottom-right-radius: 3px;
-            border-bottom-left-radius: 3px;
+            left:0%; 
         }
 
         &:before{
             top:0;
             left:0;
-            position:absolute;
-            border-top-right-radius: 3px;
-            border-top-left-radius: 3px;
-        }
-        
-        
-        &:hover{
-            // transform: translateY(-5rem);
-            
-            transition: all .5s ease-in-out;
-            height:80%;
-            padding:8rem 5rem 15rem 5rem;
-            z-index: 100;
-            .skills__para{
-                transform: scaleY(1);
-                opacity: 1;
-
-            }
         }
     }
 }
 
 .skills__para{
-    transform: scaleY(1);
-    transform-origin: left;
-    transition: all .8s;
+    transform: scaleY(0);
+    transform-origin: top;
+
+    transition-property: opacity;
+    transition-duration: .6s;
+    transition-delay: .3s;
+
     opacity: 0;
+
+    padding: 2rem 2rem;
+    color: var(--color-grey-dark-1);
+    font-size: 1.2rem;
+ 
 }
 
 .card__container{
+    width: 15rem;
+    margin:auto;
+
+    font-size: 8rem;
+    transition: all .5s;
     position: relative;
 }
 
 .devicon{
-    font-size: 8rem;
     position: absolute;
     top:51%;
     left:51%;
@@ -256,33 +195,31 @@
 }
 
 .currently{
+    transition:all .5s;
     background-color: var(--color-grey-light-1);
     box-shadow: 0 10px 10px 1px rgba(0,0,0,.3);
     border-radius: 2px;
 
     font-size: 1rem;
     font-weight: 600;
-    
+    text-align: center;
 
     padding:1rem;
     position: absolute;
-    top:230px;
+    top:115px;
     left:50%;
     transform: translateX(-50%);
+    width:18rem;
 }
 
 .skills__para{
-    padding: 1rem 0;
-    color: var(--color-grey-dark-1);
-    font-size: 1.3rem;
-    text-align: justify;
-    text-justify: inter-word;
     
-    &--html{
+    
+    &--html5{
         border-top: 2px solid var(--color-html);
         border-bottom: 2px solid var(--color-html);
     }
-    &--css{
+    &--css3{
         border-top: 2px solid var(--color-css);
         border-bottom: 2px solid var(--color-css);
     }
@@ -292,7 +229,7 @@
         border-bottom: 2px solid var(--color-sass);
     }
 
-    &--js{
+    &--javascript{
         border-top: 2px solid var(--color-js);
         border-bottom: 2px solid var(--color-js);
     }
@@ -316,18 +253,38 @@
         border-top: 2px solid var(--color-php);
         border-bottom: 2px solid var(--color-php);
     }
+
+    &--laravel{
+        border-top: 2px solid var(--color-git);
+        border-bottom: 2px solid var(--color-git);
+    }
+
+    &--unity{
+        border-top: 2px solid var(--color-unity);
+        border-bottom: 2px solid var(--color-unity);
+    }
+
+    &--photoshop{
+        border-top: 2px solid var(--color-photoshop);
+        border-bottom: 2px solid var(--color-photoshop);
+    }
+
+    &--illustrator{
+        border-top: 2px solid var(--color-ai);
+        border-bottom: 2px solid var(--color-ai);
+    }
 }
 
 .card__skills{
 
-    &--html{
+    &--html5{
         color:var(--color-html);
         &:after,&:before{
             background: linear-gradient(to right, var(--color-html) , rgb(255, 200, 48));
         }
     }
 
-    &--css{
+    &--css3{
         color:var(--color-css);
         &:after,&:before{
             background: linear-gradient(to right, var(--color-css) , rgb(125, 168, 255));
@@ -341,7 +298,7 @@
         }
     }
 
-    &--js{
+    &--javascript{
         color:var(--color-js);
         font-size: 1rem;
         &:after,&:before{
@@ -382,8 +339,54 @@
             background: linear-gradient(to right, var(--color-php) , #7ea0d6);
         }
     }
+
+    &--laravel{
+        color:var(--color-git);
+        font-size: 1rem;
+
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-git) , #ff7259);
+        }
+    }
+
+    &--unity{
+        color:var(--color-unity);
+        font-size: 1rem;
+
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-unity) , #474747);
+        }
+    }
+
+    &--photoshop{
+        color:var(--color-photoshop);
+        font-size: 1rem;
+
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-photoshop) , #cedfff);
+        }
+    }
+
+    &--illustrator{
+        color:var(--color-ai);
+        font-size: 1rem;
+
+        &:after,&:before{
+            background: linear-gradient(to right, var(--color-ai) , #ffbc7d);
+        }
+    }
 }
 
+
+.unity {
+    display: block;
+    text-indent: -9999px;
+    width: 60%;
+    height: 60%;
+    background: url(../images/unity.svg);
+    background-size: cover;
+    left:50%;
+}
 
 
 

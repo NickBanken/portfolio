@@ -20,6 +20,9 @@
     --color-jquery:#0069af;
     --color-git: #f25038;
     --color-php: #6181b5;
+    --color-unity:#292929;
+    --color-photoshop:#80b5e2;
+    --color-ai:#fc7d3a;
 }
 
 
@@ -34,7 +37,7 @@ html {
     box-sizing:border-box;
     font-size: 62.5%;
     color:#fff;
-    overflow:hidden
+    overflow: hidden;
 }
 
 *, *:before, *:after{
@@ -50,5 +53,5 @@ body{
     perspective: 1px;
     transform-style: preserve-3d;
     overflow-x:hidden;
-    overflow-y:auto;
+    overflow-y:visible;
 }
