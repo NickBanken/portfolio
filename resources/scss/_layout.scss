@@ -213,3 +213,36 @@ width: 100rem;
 z-index: 20;
 }
 
+
+.skills{
+    margin-bottom:25rem;
+
+}
+
+.contact{
+    h3{
+        color:white;
+    }
+    padding-top: 25rem;
+    padding-bottom: 25rem;
+    background-color: #1D2E40;
+    position: relative;
+
+    &__info{
+        font-size: 1.8rem;
+        
+        span{
+            color:var(--color-primary);
+        }
+    }
+}
+
+
+.contact__background{
+    &--1{
+        width: 100vw;
+        position: absolute;
+        top:0;
+      
+    }
+}

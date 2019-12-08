@@ -85,3 +85,28 @@
     right:0;
     position: absolute;
 }
+
+
+.contact__icon{
+
+    display: block;
+    text-indent: -9999px;
+    width: 60%;
+    height: 60%;
+    
+    background-size: cover;
+    left:50%;
+
+
+    &--1{
+        position: absolute;
+        background-image: url(../images/svg/mailbox.svg);
+        width: 80rem;
+        height: 80rem;
+        opacity: .1;
+        right:1px;
+        top: 20rem;
+    }
+}
+
+

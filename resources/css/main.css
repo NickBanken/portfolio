@@ -3004,6 +3004,26 @@ html {
   width: 100rem;
   z-index: 20; }
 
+.skills {
+  margin-bottom: 25rem; }
+
+.contact {
+  padding-top: 25rem;
+  padding-bottom: 25rem;
+  background-color: #1D2E40;
+  position: relative; }
+  .contact h3 {
+    color: white; }
+  .contact__info {
+    font-size: 1.8rem; }
+    .contact__info span {
+      color: var(--color-primary); }
+
+.contact__background--1 {
+  width: 100vw;
+  position: absolute;
+  top: 0; }
+
 .circular-chart {
   display: block;
   margin: 10px auto;
@@ -3069,19 +3089,24 @@ html {
   flex-wrap: wrap;
   justify-content: center; }
 
+.card__outer:hover {
+  width: 20rem; }
+
 .card__outer {
-  flex-basis: 30rem;
   display: flex;
   position: relative;
   height: 35rem;
   margin: 3rem;
   flex-grow: 1;
-  transition-property: flex-grow,height;
-  transition-duration: .2s,.3s;
-  transition-delay: 0s,.2s; }
+  width: 20rem;
+  transition-property: flex-grow,height,width;
+  transition-duration: 0.6s,.3s,0.6s;
+  transition-delay: 0s,.2s;
+  overflow: hidden; }
   .card__outer:hover {
     flex-grow: 50;
-    height: 45rem; }
+    height: 45rem;
+    width: 20rem; }
     .card__outer:hover .card__container {
       width: 8rem;
       margin: auto;
@@ -3098,7 +3123,7 @@ html {
   transition-property: height,width;
   transition-duration: .4s,.2s;
   transition-delay: .2s,0s;
-  padding: 8rem 5rem 2rem 5rem;
+  padding: 8rem 2rem 2rem 2rem;
   background-color: var(--color-grey-light-1);
   box-shadow: -5px 10px 40px 0px rgba(0, 0, 0, 0.315);
   border-radius: 20px; }
@@ -3134,9 +3159,9 @@ html {
   font-size: 1.2rem; }
 
 .card__container {
-  width: 15rem;
+  width: 11rem;
   margin: auto;
-  font-size: 8rem;
+  font-size: 6rem;
   transition: all .5s;
   position: relative; }
 
@@ -3350,3 +3375,19 @@ html {
   top: 0;
   right: 0;
   position: absolute; }
+
+.contact__icon {
+  display: block;
+  text-indent: -9999px;
+  width: 60%;
+  height: 60%;
+  background-size: cover;
+  left: 50%; }
+  .contact__icon--1 {
+    position: absolute;
+    background-image: url(../images/svg/mailbox.svg);
+    width: 80rem;
+    height: 80rem;
+    opacity: .1;
+    right: 1px;
+    top: 20rem; }
