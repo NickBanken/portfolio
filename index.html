@@ -21,14 +21,14 @@
     <header class="header">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="header__wrap col-lg-5 d-flex justify-content-end">
+                <div class="header__wrap col-lg-5 d-flex justify-content-center justify-content-lg-end">
                     <div class="header__wrap--shape">
                         <img src="resources/images/default-user-icon-8.jpg" class="header__wrap--img">
                     </div>
                     
                 </div>
-                <div class="header__quote quote col-lg-7">
-                    <p>The road to succes is also the road of learning</p>
+                <div class="header__quote quote col-md-12 col-lg-7">
+                    <p> &ldquo; The road to succes is also the road of learning &rdquo; </p>
                 </div>
                 
             <h3 class="header__title col-lg-12">Nick<span>Banken</span></h3>
@@ -39,7 +39,7 @@
     <section class="bio">
         <div class="container">
             <div class="section__wrap row d-flex justify-content-center">
-                <h3 class="section__title col-3">
+                <h3 class="section__title col-8 col-md-5 col-lg-3">
                     BIO
                 </h3>
                 <p class="section__para bg--2">Life in a nutshell</p>
@@ -65,7 +65,7 @@
     <section class="portfolio">
         <div class="container">
             <div class="section__wrap row d-flex justify-content-center">
-                <h3 class="section__title col-3">
+                <h3 class="section__title col-8 col-md-5 col-lg-3">
                     Portfolio
                 </h3>
                 <p class="section__para bg--1">Trail and error</p>
@@ -141,7 +141,7 @@
     </section>
 
     <div class="parallax-wrapper">
-        <div class="parallax-quote quote">
+        <div class="quote parallax-quote ">
             <h3  class="quote">
                 There's no pleasure in working if you don't do the things you want to do.
             </h3>
@@ -153,7 +153,7 @@
     <section class="skills">
         <div class="container">
             <div class="section__wrap row d-flex justify-content-center">
-                <h3 class="section__title col-3">
+                <h3 class="section__title col-8 col-md-5 col-lg-3">
                     My skills
                 </h3>
                 <p class="section__para bg--1">Loading . . .</p>
@@ -164,7 +164,7 @@
         </div>
     </section>
 
-    <section id="dev" class="contact">
+    <section  class="contact">
         <div class="container">
             <div class="section__wrap row d-flex justify-content-center">
                 <h3 class="section__title col-7">
@@ -179,7 +179,7 @@
                         Or perhaps you want to meet up to see if I am a match with your company?<br>
                         You can always contact me at <span>nick.banken@gmail.com</span> or at my social media's listed below.
                         <br>
-                        I an thrilled to start a new adventure and to meet new faces!
+                        I am thrilled to start a new adventure and to meet new faces!
                     </p>
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center">
@@ -189,11 +189,38 @@
         </div>
         <div class="contact__background--1"></div>
         <i class="contact__icon contact__icon--1"></i>
-        <img src="resources/images/svg/background_01.svg" alt="" class="contact__background--1">
-        
+        <img src="resources/images/svg/background_01.png" alt="" class="contact__background--1">
+        <!-- <img src="resources/images/svg/background_01.png" alt="" class="contact__background--2"> -->
     </section>
+    <footer id="dev" class="footer">
+        <div class="footer__container container">
+            <div class="row d-flex">
+                <div class="col-4">
+                    <h3>Services</h3>
+                    <div class="row">
+                        <ul class="footer__services col-6">
+                            <li>Front-end development</li>
+                            <li>WebApp development</li>
+                        </ul>
+                        <ul class="footer__services col-6">
+                            <li>Basic Illustrations/design</li>
+                            <li>3D design</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="col-4 footer__social">
+                    <ul class="footer__social__wrapper">
+                        <li><a href="#"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-github"></use></svg></a></li>
+                        <li><a href="#"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-mail"></use></svg></a></li>
+                        <li><a href="#"><svg class="social__icons social__linkedin"><use xlink:href="resources/images/svg/sprite.svg#icon-linkedin"></use></svg></a></li>
+                    </ul>
+                </div>
+                <div class="col-4 legal">© 2019 by Nick Banken. All rights reserved. Created by Nick Banken.</div>
+            </div>
+        </div>
+    </footer>
 
-    
 </div>
 
 <script src="script.js"></script>

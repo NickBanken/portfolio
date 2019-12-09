@@ -43,8 +43,7 @@ body {
   height: 100vh;
   perspective: 1px;
   transform-style: preserve-3d;
-  overflow-x: hidden;
-  overflow-y: visible; }
+  overflow-x: hidden; }
 
 /*!
  * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
@@ -2859,28 +2858,39 @@ html {
   background-image: linear-gradient(to bottom, rgba(6, 29, 61, 0.8), rgba(6, 29, 61, 0.8)), url("../images/header-img-large.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 115vh; }
   .header__wrap {
     margin-top: 25%; }
     .header__wrap--shape {
-      height: 230px;
-      width: 230px; }
+      height: 180px;
+      width: 180px; }
+      @media only screen and (min-width: 62rem) {
+        .header__wrap--shape {
+          height: 230px;
+          width: 230px; } }
     .header__wrap--img {
       width: 100%;
       border-radius: 50%;
       border: 5px solid white; }
   .header__quote {
+    margin-top: 10%;
     display: flex;
     justify-content: end;
-    align-items: center;
-    margin-top: 25%; }
+    align-items: center; }
+    @media only screen and (min-width: 62rem) {
+      .header__quote {
+        margin-top: 25%; } }
   .header__title {
     font-weight: 500;
-    font-size: 5rem;
+    font-size: 3rem;
     margin-top: 15px;
     display: flex;
     text-transform: uppercase;
     justify-content: center; }
+    @media only screen and (min-width: 36rem) {
+      .header__title {
+        font-size: 5rem; } }
     .header__title span {
       margin-left: 1rem;
       color: var(--color-primary-light); }
@@ -2972,7 +2982,7 @@ html {
 
 .parallax-wrapper {
   width: 100vw;
-  height: 55rem;
+  height: 30rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -2980,6 +2990,12 @@ html {
   box-sizing: border-box;
   position: relative;
   z-index: -70; }
+  @media only screen and (min-width: 48rem) {
+    .parallax-wrapper {
+      height: 55rem; } }
+  .parallax-wrapper--small {
+    height: 25rem;
+    margin-top: -10rem; }
 
 .parallax-wrapper::after {
   content: '';
@@ -2993,6 +3009,18 @@ html {
   z-index: -100;
   transform: translateZ(-1px) scale(2); }
 
+.parallax-wrapper--small::after {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  backface-visibility: hidden;
+  background-image: url(../images/arizona-asphalt-beautiful-blue-sky-490466.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: -100;
+  transform: translateZ(-1px) translateY(200px) scale(2); }
+
 .content {
   margin: 0 auto;
   padding: 50px;
@@ -3002,10 +3030,11 @@ html {
 
 .parallax-quote {
   width: 100rem;
-  z-index: 20; }
+  z-index: 20;
+  margin: 6rem; }
 
 .skills {
-  margin-bottom: 25rem; }
+  margin-bottom: 10rem; }
 
 .contact {
   padding-top: 25rem;
@@ -3022,7 +3051,52 @@ html {
 .contact__background--1 {
   width: 100vw;
   position: absolute;
-  top: 0; }
+  top: -10px;
+  right: 0; }
+
+.contact__background--2 {
+  width: 100vw;
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 0; }
+
+.footer {
+  background-color: #162230;
+  padding: 4rem 0;
+  box-shadow: 0 -10px 10px 2px rgba(0, 0, 0, 0.4); }
+  .footer h3 {
+    font-size: 1.7rem; }
+  .footer__social {
+    margin: auto; }
+  .footer__social__wrapper {
+    display: flex;
+    justify-content: space-around;
+    border-right: 2px rgba(0, 0, 0, 0.4) solid;
+    border-left: 2px rgba(0, 0, 0, 0.4) solid;
+    padding: 2rem; }
+    .footer__social__wrapper li {
+      display: flex;
+      align-items: center;
+      text-decoration: none; }
+      .footer__social__wrapper li a {
+        height: 4rem;
+        width: 4rem; }
+        .footer__social__wrapper li a:hover .social__icons {
+          transform: translateY(-5px);
+          fill: #d84646;
+          filter: drop-shadow(1px 10px 2px black); }
+  .footer__services {
+    list-style-type: none;
+    display: table; }
+    .footer__services li {
+      margin-top: .8rem;
+      padding: .4rem;
+      border-bottom: 1px solid var(--color-grey-dark-1); }
+
+.legal {
+  display: flex;
+  align-items: center; }
 
 .circular-chart {
   display: block;
@@ -3099,6 +3173,7 @@ html {
   margin: 3rem;
   flex-grow: 1;
   width: 20rem;
+  box-shadow: -5px 10px 40px 0px rgba(0, 0, 0, 0.4);
   transition-property: flex-grow,height,width;
   transition-duration: 0.6s,.3s,0.6s;
   transition-delay: 0s,.2s;
@@ -3125,7 +3200,6 @@ html {
   transition-delay: .2s,0s;
   padding: 8rem 2rem 2rem 2rem;
   background-color: var(--color-grey-light-1);
-  box-shadow: -5px 10px 40px 0px rgba(0, 0, 0, 0.315);
   border-radius: 20px; }
   .card__skills h3 {
     font-size: 2rem;
@@ -3355,18 +3429,26 @@ html {
   color: #fff; }
 
 .quote {
-  font-size: 5rem;
   font-weight: 100;
-  line-height: 1.1; }
-  .quote :not(:nth-child(2n)):before {
-    content: open-quote; }
-  .quote :not(:nth-child(2n)):after {
-    content: close-quote; }
+  line-height: 1.1;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem; }
+  @media only screen and (min-width: 62rem) {
+    .quote {
+      font-size: 5rem;
+      text-align: start; } }
+  @media only screen and (min-width: 48rem) {
+    .quote {
+      font-size: 4rem; } }
 
 .artist-name {
   margin-top: 30px;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-align: end; }
+  @media only screen and (min-width: 48rem) {
+    .artist-name {
+      font-size: 3rem; } }
 
 .vignette {
   height: 100%;
@@ -3375,6 +3457,8 @@ html {
   top: 0;
   right: 0;
   position: absolute; }
+  .vignette--extreme {
+    background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); }
 
 .contact__icon {
   display: block;
@@ -3391,3 +3475,10 @@ html {
     opacity: .1;
     right: 1px;
     top: 20rem; }
+
+.social__icons {
+  height: 100%;
+  width: 100%;
+  transition: .4s;
+  padding: .5rem;
+  fill: var(--color-primary); }

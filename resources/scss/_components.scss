@@ -58,23 +58,32 @@
 }
 
 .quote{
-    font-size: 5rem;
+    
     font-weight: 100;
     line-height: 1.1;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
 
-    :not(:nth-child(2n)):before{
-        content: open-quote;
+    
+    @media only screen and (min-width: $bp-large){
+        font-size: 5rem;
+        text-align: start;
     }
 
-    :not(:nth-child(2n)):after{
-        content: close-quote;
+    @media only screen and (min-width: $bp-medium){
+        font-size: 4rem;
     }
 }
 
 .artist-name{
     margin-top: 30px;
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: end;
+
+    @media only screen and (min-width: $bp-medium){
+        font-size: 3rem;
+    }
 }
 
 .vignette{
@@ -84,11 +93,14 @@
     top:0;
     right:0;
     position: absolute;
+
+    &--extreme{
+        background: radial-gradient(  rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    }
 }
 
 
 .contact__icon{
-
     display: block;
     text-indent: -9999px;
     width: 60%;
@@ -107,6 +119,18 @@
         right:1px;
         top: 20rem;
     }
+}
+
+.social{
+    &__icons{
+        height: 100%;
+        width: 100%;
+
+        transition: .4s;
+        padding: .5rem;
+        fill:var(--color-primary);
+    }  
+    
 }
 
 

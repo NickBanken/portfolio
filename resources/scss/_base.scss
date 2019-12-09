@@ -23,7 +23,16 @@
     --color-unity:#292929;
     --color-photoshop:#80b5e2;
     --color-ai:#fc7d3a;
+
+
+    
 }
+
+    $bp-largest: 75rem; //1200px
+    $bp-large: 62rem; //992px
+    $bp-medium: 48rem; //768px
+    $bp-small : 36rem; //576px
+
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap');
@@ -53,5 +62,4 @@ body{
     perspective: 1px;
     transform-style: preserve-3d;
     overflow-x:hidden;
-    overflow-y:visible;
 }
