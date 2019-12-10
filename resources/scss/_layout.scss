@@ -67,13 +67,19 @@
 
 .bio{
     margin-top: -7rem;
+    transform: skewY(-4deg);
+    color: var(--color-grey-dark-1);
+    background-color: white;
+    padding-bottom: 2em;
+    box-shadow: 0px 100px 90px 80px rgba(0,0,0,.6);
+
+    @media only screen and (min-width: $bp-medium){
+        padding-bottom: 10rem;   
+    }
+
     .container{
         transform: skewY(4deg);
     }
-    transform: skewY(-4deg);
-    color: var(--color-grey-dark-1);
-    background-color: var(--color-grey-light-2);
-    padding-bottom: 10rem;
 
     &__row{
         margin-bottom: 8rem;
@@ -100,52 +106,45 @@
         
         }
     }
+
+    &__image{
+        width: 100%;
+    }
 }
 
+
 .portfolio{
-    color: var(--color-grey-dark-1);
-    background-color: white;
-    z-index: 10;
-    margin-top: -7rem;
+    background-color: #1D2E40;
+    margin-top: -15rem;
+    padding-top:10rem ;
     padding-bottom: 10rem;
 
-    .section__wrap{
-        margin-top: 8rem;
-    }
-
     &__wrapper{
-        width: 60rem;
-        height: 40rem;
-        margin-bottom: 6rem;
-        
-        position: relative;
-        overflow: hidden;
-        border-radius: 1%;
-        z-index: 100;
-    }
+        width: 40rem;
+        height: 100%;
+        text-decoration: none;
 
-    &__wrapper:hover &__image{
-        transform: translateX(20rem) translateY(-0rem) scale(1);
-        filter:blur(1px) brightness(.5);
-        backface-visibility: hidden;
- 
+        @media only screen and (min-width: $bp-large){
+            width: 60rem;  
+        }
+
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 2px;
     }
 
     &__image{
         width: 100%;
-        transform: scale(1.1);
-        transition: all .5s;
+        margin-bottom: -10rem;
     }
 
     &__description{
-        position: absolute;
-        top:0;
-        transform: translateX(-30rem);
-        // transform: translateX(0rem);
         background-color: var(--color-grey-light-1);
 
         padding: 4rem;
-        width: 30rem;
+        
+        width: 100%;
         height: 100%;
         transition: all .5s;
 
@@ -157,37 +156,106 @@
             color:var(--color-primary-light);
             text-transform: uppercase;
         }
-
+            
         &__para{
             font-size: 1.4rem;
             padding-bottom: 2rem;
             margin-bottom: 2rem;
             border-bottom:  2px solid var(--color-primary-light);
-        }
-
-        &__logos{
-            transform-origin: top;
-            transform: scaleY(0) translateY(-10rem);
-            display: flex;
-            justify-content: center;
-            opacity: 0;
-            transition-delay: .35s;
-            transition-property: all;
-            transition-duration: .4s;
-            // transition: all .4s;
             
         }
+            
     }
 
-    &__wrapper:hover &__description{
-        transform: translateX(0rem);
-        &__logos{
-            transform: scaleY(1);
-            opacity: 1;
-        }
+    .section__wrap{
+        margin-top: 8rem;
     }
-    
 }
+
+
+// .portfolio{
+//     background-color: #1D2E40;
+//     margin-top: -15rem;
+//     padding-top:10rem ;
+//     padding-bottom: 10rem;
+
+//     &__wrapper{
+//         width: 60rem;
+//         height: 40rem;
+//         margin-bottom: 6rem;
+        
+//         position: relative;
+//         overflow: hidden;
+//         border-radius: 2px;
+//     }
+
+//     &__image{
+//         width: 100%;
+//         transform: scale(1.1);
+//         transition: all .5s;
+//     }
+
+//     &__description{
+//         position: absolute;
+//         top:0;
+//         transform: translateX(-30rem);
+//         // transform: translateX(0rem);
+//         background-color: var(--color-grey-light-1);
+
+//         padding: 4rem;
+//         width: 30rem;
+//         height: 100%;
+//         transition: all .5s;
+
+//         color:var(--color-grey-dark-1);
+
+//         &__title{
+//             font-size: 2rem;
+//             margin-bottom: 1rem;
+//             color:var(--color-primary-light);
+//             text-transform: uppercase;
+//         }
+
+//         &__para{
+//             font-size: 1.4rem;
+//             padding-bottom: 2rem;
+//             margin-bottom: 2rem;
+//             border-bottom:  2px solid var(--color-primary-light);
+//         }
+
+//         &__logos{
+//             transform-origin: top;
+//             transform: scaleY(0) translateY(-10rem);
+//             display: flex;
+//             justify-content: center;
+//             opacity: 0;
+//             transition-delay: .35s;
+//             transition-property: all;
+//             transition-duration: .4s;
+//             // transition: all .4s;
+            
+//         }
+ 
+//     }
+
+//     &__wrapper:hover &__image{
+//         transform: translateX(20rem) translateY(-0rem) scale(1);
+//         filter:blur(1px) brightness(.5); 
+//     }
+
+//     &__wrapper:hover &__description{
+//         transform: translateX(0rem);
+//         &__logos{
+//             transform: scaleY(1);
+//             opacity: 1;
+//         }
+//     }
+
+//     .section__wrap{
+//         margin-top: 8rem;
+//     }
+    
+// }
 
 .parallax-wrapper{
     width: 100vw;
@@ -264,10 +332,16 @@
     h3{
         color:white;
     }
-    padding-top: 25rem;
-    padding-bottom: 25rem;
+    
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     background-color:#1D2E40;
     position: relative;
+
+    @media only screen and (min-width: $bp-largest){
+        padding-top: 25rem; 
+        padding-bottom: 25rem;
+    }
 
     &__info{
         font-size: 1.8rem;
@@ -306,15 +380,23 @@
 
     &__social{
         margin: auto;
+        padding:2rem 0;
     }
 
     &__social__wrapper{
         display: flex;
         justify-content: space-around;
 
-        border-right: 2px rgba(0, 0, 0, 0.4) solid;
-        border-left: 2px rgba(0, 0, 0, 0.4) solid;
+        border-top: 2px rgba(0, 0, 0, 0.2) solid;
+        border-bottom: 2px rgba(0, 0, 0, 0.2) solid;
         padding:2rem;
+
+        @media only screen and (min-width: $bp-large){
+            border-right: 2px rgba(0, 0, 0, 0.4) solid;
+            border-left: 2px rgba(0, 0, 0, 0.4) solid;
+            border-top: none;
+            border-bottom:none;
+        }
 
         li{
             display: flex;
@@ -349,4 +431,5 @@
 .legal{
     display: flex;
     align-items: center;
+    justify-content: center;
 }

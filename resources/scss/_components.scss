@@ -1,3 +1,7 @@
+.m-bottom-5{
+    margin-bottom: 5rem;
+}
+
 .m-bottom-10{
     margin-bottom: 10rem;
 }
@@ -7,20 +11,29 @@
         position: relative;
     }
     &__title{
-        margin:12rem 0;
+        margin:8rem 0 11rem 0;
         padding-bottom: 1rem;
         font-size: 4rem;
         text-align: center;
         border-bottom: 3px solid var(--color-primary);
         color: var(--color-grey-dark-1);
+
+        @media only screen and (min-width: $bp-medium){
+            margin:12rem 0;     
+        }
+
+        &--white{
+            color: white;
+        }
     }
 
     &__para{
-        color: var(--color-grey-dark-1);
+        
         position: absolute;
         left:50%;
         bottom: 29%;
         transform: translate(-50%, -50%);
+        
 
         font-size: 1.5rem;
         padding:.4rem;
@@ -32,10 +45,12 @@
 
 .bg--1{
     background-color: #fff;
+    color: var(--color-grey-dark-1)
 }
 
 .bg--2{
-    background-color: #ecf0f1;
+    background-color: #1D2E40;
+    color: white;
 }
 
 
@@ -113,11 +128,25 @@
     &--1{
         position: absolute;
         background-image: url(../images/svg/mailbox.svg);
-        width: 80rem;
-        height: 80rem;
-        opacity: .1;
-        right:1px;
-        top: 20rem;
+        width: 40rem;
+        height: 40rem;
+        opacity: .05;
+        right:-11rem;
+        top: 30rem;
+
+        @media only screen and (min-width: $bp-large){
+            width: 40rem;
+            height: 40rem;
+            top: 30rem;
+            left:80rem;
+        }
+
+        @media only screen and (min-width: $bp-largest){
+            width: 80rem;
+            height: 80rem;
+            top: 20rem;
+            right:1px;
+        }
     }
 }
 
