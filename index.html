@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicon-16x16.png">
 
     <title>Portfolio: Nick Banken</title>
-   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+   <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> -->
 
 </head>
 <body>
@@ -46,7 +46,12 @@
             </div>
             <div class="bio__row row">
                 <div class="bio__shape col-lg-6">
-                    <img class="bio__image" src="resources/images/developer-svg.jpg" alt="developer working">
+                    <picture>
+                        <source class="bio__image" media="(min-width: 768px)" srcset="resources/images/developer-svg.jpg" alt="developer working">
+                        <img class="bio__image" src="resources/images/developer-svg-small.jpg" alt="developer working">
+                        
+                    </picture>
+                    <!-- <img class="bio__image" src="resources/images/developer-svg.jpg" alt="developer working"> -->
                 </div>
                 <div class="col-lg-6">
                     <div class="bio__about">
@@ -222,9 +227,9 @@
                 </div>
                 <div class="col-12 col-lg-4 footer__social">
                     <ul class="footer__social__wrapper">
-                        <li><a href="#"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-github"></use></svg></a></li>
-                        <li><a href="#"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-mail"></use></svg></a></li>
-                        <li><a href="#"><svg class="social__icons social__linkedin"><use xlink:href="resources/images/svg/sprite.svg#icon-linkedin"></use></svg></a></li>
+                        <li><a href="#" aria-label="Github"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-github"></use></svg></a></li>
+                        <li><a href="#" aria-label="Gmail"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-mail"></use></svg></a></li>
+                        <li><a href="#" aria-label="Linkedin"><svg class="social__icons social__linkedin"><use xlink:href="resources/images/svg/sprite.svg#icon-linkedin"></use></svg></a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4 legal">© 2019 by Nick Banken. All rights reserved. Created by Nick Banken.</div>
