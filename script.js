@@ -7,7 +7,7 @@ let skills = [
         working:false,
         para:`The SEO score is very important to me, that is why I strive to get my scores as high as possible.
         <br>
-        I apply the B.E.M method to make classes easier to read and used in sass later.`
+        I use the B.E.M method to make classes easier to apply in sass later.`
     },
     {
         name:"css3",
@@ -15,9 +15,9 @@ let skills = [
         score:85,
         skill:"css",
         working:false,
-        para:`I'm not a designer but once I get hold of a design, I can make the perfect duplicate in HTML and CSS!
+        para:`I'm not a designer, but once I get hold of a design, I can make a perfect duplicate in HTML and CSS!
         <br>
-        I rather write SCSS than CSS, it's compact and more readable.`
+        I prefer SASS over CSS. It's compact and more readable.`
     },
     {
         name:"sass",
@@ -25,10 +25,8 @@ let skills = [
         score:75,
         skill:"sass",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`I love to use SASS! It keeps your files structured and readable for others.
+        Sass combine with the B.E.M method is heaven, of course, I could drop B.E.M if you'd like.`
     },
     {
         name:"javascript",
@@ -36,10 +34,8 @@ let skills = [
         score:84,
         skill:"js",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`The most important language for a front-ender! This makes our lives so much easier.
+        `
     },
     {
         name:"git",
@@ -47,10 +43,7 @@ let skills = [
         score:78,
         skill:"git",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`Git is one of the most well-known tools in our kit. It's one of the best reliable ways to have back-ups.`
     },
     {
         name:"vuejs",
@@ -58,10 +51,7 @@ let skills = [
         score:40,
         skill:"VUE.js",
         working:true,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`So far an impressive framework to build lightweight applications.`
     },
     {
         name:"laravel",
@@ -69,10 +59,7 @@ let skills = [
         score:45,
         skill:"Laravel",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`During my course at BeCode, I have worked with Laravel as a framework for PHP. It does a lot of work for you, which you normally would have to write on your own with just PHP.`
     },
     {
         name:"php",
@@ -80,10 +67,7 @@ let skills = [
         score:65,
         skill:"php",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`PHP still has secrets for me, but I love working with it.`
     },
     {
         name:"unity",
@@ -91,21 +75,17 @@ let skills = [
         score:55,
         skill:"Unity",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`Before my journey as a web developer, I've learned to make game-apps inside Unity.`
     },
     {
         name:"jquery",
         color:"jquery",
         score:80,
-        skill:"JQuery",
+        skill:"jQuery",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
+        para:`Another lovely framework that I got in touch with, just like they say, "Write less, do more.".
         <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        But lately, there are better alternatives.`
     },
     {
         name:"photoshop",
@@ -113,10 +93,9 @@ let skills = [
         score:75,
         skill:"PS",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
+        para:`Photoshop is reasonably easy for me to use. Want some edits? Or maybe add a colleague that was absent when our group picture was taken? 
         <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        The sky is the limit!`
     },
     {
         name:"illustrator",
@@ -124,10 +103,7 @@ let skills = [
         score:60,
         skill:"Ai",
         working:false,
-        para:`I love to use SASS, it keeps your files structured and readable for others.
-        This combined with the B.E.M method is heaven.
-        <br>
-        Ofcourse, I could drop B.E.M if you'd like!`
+        para:`I might not make vector art in my daily life, but I know Illustrator enough to make basic designs/vector art.`
     },
     
 ]

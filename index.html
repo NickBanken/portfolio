@@ -8,14 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <link rel="stylesheet" href="resources/css/main-min.css">
+    <link rel="stylesheet" href="resources/css/main.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="resources/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicon-16x16.png">
 
     <title>Portfolio: Nick Banken</title>
-    <script src="scipt-min.js" defer></script>
-   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
 </head>
 <body>
@@ -24,16 +24,20 @@
             <div class="row justify-content-center">
                 <div class="header__wrap col-lg-5 d-flex justify-content-center justify-content-lg-end">
                     <div class="header__wrap--shape">
-                        <img src="resources/images/default-user-icon-8.jpg" alt="profile image" class="header__wrap--img">
+                        <img src="resources/images/me-resized.jpg" alt="profile image" class="header__wrap--img">
                     </div>
                     
                 </div>
                 <div class="header__quote quote col-md-12 col-lg-7">
-                    <p> &ldquo; The road to succes is also the road of learning &rdquo; </p>
+                    <p>
+                         &ldquo; The road to succes is also the road of learning &rdquo; 
+                    </p>
                 </div>
                 
             <h3 class="header__title col-lg-12">Nick<span>Banken</span></h3>
-            <p class="header__paragraph col-xs-12 center-sm">I'm a web-developer</p>
+            <p class="header__paragraph col-xs-12 center-sm">
+                I'm a front-end developer
+            </p>
         </div>
     </header>
 
@@ -43,7 +47,9 @@
                 <h3 class="section__title col-8 col-md-5 col-lg-3">
                     BIO
                 </h3>
-                <p class="section__para bg--1">Life in a nutshell</p>
+                <p class="section__para bg--1">
+                    Life in a nutshell
+                </p>
             </div>
             <div class="bio__row row">
                 <div class="bio__shape col-lg-6">
@@ -57,12 +63,35 @@
                 <div class="col-lg-6">
                     <div class="bio__about">
                         <h4>Hello there! My name is Nick,</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorum ipsa adipisci et at deleniti est rem ipsam veritatis perspiciatis. Asperiores corrupti cupiditate libero maiores reiciendis laborum aliquid cum reprehenderit
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorum ipsa adipisci et at deleniti est rem ipsam veritatis perspiciatis. Asperiores corrupti cupiditate libero maiores reiciendis laborum aliquid cum reprehenderit.</p>
+                        <br>
+                        <p>I am a 3D-Artist that made a career switch into the web developers world! <br>
+                            A year ago, I heard about a course that would make a  web developer out of you in just 7 months. Sounds crazy right?
+                            <br>
+                            <br>
+                            Well, I have witnessed a lot of people growing from 0 to be able to set up an MVC system, on their own! <br>
+                            
+                            The organization behind this was BeCode. I believe strongly in the way that people were being trained and saw myself growing every day.
+                            <br>
+                            <br>
+                            When I reached the end of the course, I got a job offering by BeCode, to become a full-time coach for new students. <br>
+                            I did not hesitate and took the offer, and I loved every single moment of it.
+                            <br>
+                            <br>
+                            While I love to work with and help people, I think it's time to start with the real deal, and that is working for companies like yours!
+                            <br>
+                            <br>
+                            Hi, My name is <b>Nick</b>, and I am a <b>front-end developer</b> with a passion for <b>learning new things</b>.
+                            <br>
+                            <br>
+                            Hope to see you soon!</p>
                           
                     </div>
-                    <button class="btn--primary">Download cv</button>
-                    <button class="btn--primary">Get in touch</button>  
+                    <a class="btn--primary" href="resources/documents/cv_2020.pdf" download>
+                        Download cv
+                    </a>
+                    <a class="btn--primary" href="#getInTouch">
+                        Get in touch
+                    </a>  
                 </div>  
             </div>
         </div>
@@ -74,81 +103,80 @@
                 <h3 class="section__title section__title--white col-8 col-md-5 col-lg-3">
                     Portfolio
                 </h3>
-                <p class="section__para bg--2">Trail and error</p>
+                <p class="section__para bg--2">
+                    Trail and error
+                </p>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class=" col-md-12 col-lg-6 d-flex justify-content-center m-bottom-5">
-                    <a href="#" class="portfolio__wrapper">
+                    <a href="https://nickbanken.github.io/Barber_website/" target="_blank" rel="noreferrer" class="portfolio__wrapper" title="A website for David's haircreation">
                         <div class="portfolio__holder">
-                            <img src="resources/images/kitten.jpg" alt="kitten placeholder" class="portfolio__image">
+                            <div class="portfolio__hover">
+                                <svg class="magnif">
+                                    <use 
+                                    xlink:
+                                    href="resources/images/svg/sprite2.svg#icon-search"></use>
+                                </svg>
+                            </div>
+                            <img src="resources/images/kapperswebsite-small.jpg" alt="kitten placeholder" class="portfolio__image">
                         </div>
                         <div class="portfolio__description">
-                            <h3 class="portfolio__description__title">Bomberman</h3>
-                            <p class="portfolio__description__para">The game that belongs to the one and only SONIC, believe it or not after the remake of the movie. Millions of fans got still dissapointed by the poor acting of Jim carrey.
-                            Donald trump wants to strike back and make the mexicans pay for it!
+                            <h3 class="portfolio__description__title">
+                                David's haircreation
+                            </h3>
+                            <p class="portfolio__description__para">
+                                I went looking for someone's website that could use a total makeover.
+                                In the end I chose a barbershop to remake their website.
+                                <br>
+                                <br>
+                                Vue.js will be applied to this later.
                             </p>
-                            <div class="portfolio__description__logos">
-                                    <span class="devicons devicons__html"></span>
-                                    <span class="devicons devicons__css"></span>
-                                    <span class="devicons devicons__js"></span>
-                            </div>
                         </div> 
                     </a>
                 </div>
 
                 <div class=" col-md-12 col-lg-6 d-flex justify-content-center m-bottom-5">
-                    <a href="#" class="portfolio__wrapper">
+                    <a href="https://nickbanken.github.io/natours/" target="_blank" rel="noreferrer"  class="portfolio__wrapper" title="A website for travelers">
                         <div class="portfolio__holder">
-                            <img src="resources/images/kitten.jpg" alt="kitten placeholder" class="portfolio__image">
+                            <div class="portfolio__hover">
+                                <svg class="magnif">
+                                    <use xlink:href="resources/images/svg/sprite2.svg#icon-search"></use>
+                                </svg>
+                            </div>
+                            <img src="resources/images/natours-small.jpg" alt="kitten placeholder" class="portfolio__image">
                         </div>
                         <div class="portfolio__description">
-                            <h3 class="portfolio__description__title">Bomberman</h3>
-                            <p class="portfolio__description__para">The game that belongs to the one and only SONIC, believe it or not after the remake of the movie. Millions of fans got still dissapointed by the poor acting of Jim carrey.
-                            Donald trump wants to strike back and make the mexicans pay for it!
+                            <h3 class="portfolio__description__title">
+                                Natours
+                            </h3>
+                            <p class="portfolio__description__para">
+                                During my spare time you can often find me on Udemy, this is way I discover new things and dive deeper into coding languages.  
+                                <br>
+                                <br>
+                                Thanks to a tutorial by Jonas Schmedtmann I came to this result.
                             </p>
-                            <div class="portfolio__description__logos">
-                                    <span class="devicons devicons__html"></span>
-                                    <span class="devicons devicons__css"></span>
-                                    <span class="devicons devicons__js"></span>
-                            </div>
                         </div> 
                     </a>
                 </div>
 
                 <div class=" col-md-12 col-lg-6 d-flex justify-content-center m-bottom-5">
-                    <a href="#" class="portfolio__wrapper">
+                    <a href="https://nickbanken.github.io/Trillo/" target="_blank" rel="noreferrer"  class="portfolio__wrapper" title="A website for a hotel">
                         <div class="portfolio__holder">
-                            <img src="resources/images/kitten.jpg" alt="Kitten placeholder" class="portfolio__image">
+                            <div class="portfolio__hover">
+                                <svg class="magnif">
+                                    <use xlink:href="resources/images/svg/sprite2.svg#icon-search"></use>
+                                </svg>
+                            </div>
+                            <img src="resources/images/trillo-small.jpg" alt="Kitten placeholder" class="portfolio__image">
                         </div>
                         <div class="portfolio__description">
-                            <h3 class="portfolio__description__title">Bomberman</h3>
-                            <p class="portfolio__description__para">The game that belongs to the one and only SONIC, believe it or not after the remake of the movie. Millions of fans got still dissapointed by the poor acting of Jim carrey.
-                            Donald trump wants to strike back and make the mexicans pay for it!
-                            </p>
-                            <div class="portfolio__description__logos">
-                                    <span class="devicons devicons__html"></span>
-                                    <span class="devicons devicons__css"></span>
-                                    <span class="devicons devicons__js"></span>
-                            </div>
-                        </div> 
-                    </a>
-                </div>
+                            <h3 class="portfolio__description__title">
+                                Trillo
+                            </h3>
+                            <p class="portfolio__description__para">
+                                Another website I have create by following a tutorial on Udemy. I have seen many new things, like applying the B.E.M naming convention.
 
-                <div class="col-md-12 col-lg-6 d-flex justify-content-center  m-bottom-5">
-                    <a href="#" class="portfolio__wrapper">
-                        <div class="portfolio__holder">
-                            <img src="resources/images/kitten.jpg" alt="kitten placeholder" class="portfolio__image">
-                        </div>
-                        <div class="portfolio__description">
-                            <h3 class="portfolio__description__title">Bomberman</h3>
-                            <p class="portfolio__description__para">The game that belongs to the one and only SONIC, believe it or not after the remake of the movie. Millions of fans got still dissapointed by the poor acting of Jim carrey.
-                            Donald trump wants to strike back and make the mexicans pay for it!
                             </p>
-                            <div class="portfolio__description__logos">
-                                    <span class="devicons devicons__html"></span>
-                                    <span class="devicons devicons__css"></span>
-                                    <span class="devicons devicons__js"></span>
-                            </div>
                         </div> 
                     </a>
                 </div>
@@ -173,7 +201,9 @@
                 <h3 class="section__title col-8 col-md-5 col-lg-3">
                     My skills
                 </h3>
-                <p class="section__para bg--1">Loading . . .</p>
+                <p class="section__para bg--1">
+                    Loading . . .
+                </p>
             </div>
             
             <div id='skillCards' class="row">
@@ -181,7 +211,8 @@
         </div>
     </section>
 
-    <section  class="contact">
+    <section  class="contact" id="getInTouch">
+        <img src="resources/images/svg/background_01.png" alt="Contact mailbox" class="contact__background--1">
         <div class="container">
             <div class="section__wrap row d-flex justify-content-center">
                 <h3 class="section__title col-12 col-md-5 col-lg-3">
@@ -190,11 +221,12 @@
             </div>
             
             <div class="row d-flex justify-content-center">
+                
                 <div class="col-10 col-md-6">
                     <p class="contact__info">
                         Want to know more about me?<br>
                         Or perhaps you want to meet up to see if I am a match with your company?<br>
-                        You can always contact me at <span>nick.banken@gmail.com</span> or at my social media's listed below.
+                        You can always contact me at <a class="mail" href="mailto:Nick.Banken@gmail.com" target="_blank" aria-label="Gmail"><span>nick.banken@gmail.com</span></a> or at my social media's listed below.
                         <br>
                         I am thrilled to start a new adventure and to meet new faces!
                     </p>
@@ -204,12 +236,11 @@
                 </div>
             </div>
         </div>
-        <div class="contact__background--1"></div>
         <i class="contact__icon contact__icon--1"></i>
-        <img src="resources/images/svg/background_01.png" alt="Contact mailbox" class="contact__background--1">
+        
         <!-- <img src="resources/images/svg/background_01.png" alt="" class="contact__background--2"> -->
     </section>
-    <footer id="dev" class="footer">
+    <footer class="footer">
         <div class="footer__container container">
             <div class="row d-flex">
                 <div class="col-12 col-lg-4">
@@ -228,9 +259,9 @@
                 </div>
                 <div class="col-12 col-lg-4 footer__social">
                     <ul class="footer__social__wrapper">
-                        <li><a href="#" aria-label="Github"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-github"></use></svg></a></li>
-                        <li><a href="#" aria-label="Gmail"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-mail"></use></svg></a></li>
-                        <li><a href="#" aria-label="Linkedin"><svg class="social__icons social__linkedin"><use xlink:href="resources/images/svg/sprite.svg#icon-linkedin"></use></svg></a></li>
+                        <li><a href="https://github.com/NickBanken" target="_blank" rel="noreferrer"  aria-label="Github"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-github"></use></svg></a></li>
+                        <li><a href="mailto:Nick.Banken@gmail.com" target="_blank" rel="noreferrer"  aria-label="Gmail"><svg class="social__icons"><use xlink:href="resources/images/svg/sprite.svg#icon-mail"></use></svg></a></li>
+                        <li><a href="https://linkedin.com/in/nick-banken" target="_blank" rel="noreferrer"  aria-label="Linkedin"><svg class="social__icons social__linkedin"><use xlink:href="resources/images/svg/sprite.svg#icon-linkedin"></use></svg></a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4 legal">© 2019 by Nick Banken. All rights reserved. Created by Nick Banken.</div>
