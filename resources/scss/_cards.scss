@@ -93,7 +93,7 @@ animation: progress 1s ease-out forwards;
     height:32rem;
     margin:3rem;
     flex-grow: 1;
-    width: 15rem;
+    width: 20rem;
     box-shadow: -5px 10px 40px 0px rgba(0, 0, 0, 0.4);
    
 
@@ -103,7 +103,6 @@ animation: progress 1s ease-out forwards;
     overflow: hidden;
 
     @media only screen and (min-width: $bp-large){
-        width: 20rem; 
         height:35rem;
     }
     

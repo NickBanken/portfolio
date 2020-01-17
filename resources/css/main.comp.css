@@ -930,7 +930,7 @@ html {
   height: 32rem;
   margin: 3rem;
   flex-grow: 1;
-  width: 15rem;
+  width: 20rem;
   box-shadow: -5px 10px 40px 0px rgba(0, 0, 0, 0.4);
   transition-property: flex-grow,height,width;
   transition-duration: 0.6s,.3s,0.6s;
@@ -938,7 +938,6 @@ html {
   overflow: hidden; }
   @media only screen and (min-width: 62rem) {
     .card__outer {
-      width: 20rem;
       height: 35rem; } }
   .card__outer:hover {
     flex-grow: 50;
