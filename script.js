@@ -7,13 +7,13 @@ let skills = [
         working:false,
         para:`The SEO score is very important to me, that is why I strive to get my scores as high as possible.
         <br>
-        I use the B.E.M method to make classes easier to apply in sass later.`
+        I use the B.E.M. method to make classes easier to apply in sass later.`
     },
     {
         name:"css3",
         color:"blue",
         score:85,
-        skill:"css",
+        skill:"CSS",
         working:false,
         para:`I'm not a designer, but once I get hold of a design, I can make a perfect duplicate in HTML and CSS!
         <br>
@@ -23,16 +23,16 @@ let skills = [
         name:"sass",
         color:"pink",
         score:75,
-        skill:"sass",
+        skill:"Sass",
         working:false,
         para:`I love to use SASS! It keeps your files structured and readable for others.
-        Sass combine with the B.E.M method is heaven, of course, I could drop B.E.M if you'd like.`
+        Sass combined with the B.E.M. method is heaven. Of course, I could drop B.E.M. if you'd like.`
     },
     {
         name:"javascript",
         color:"yellow",
         score:84,
-        skill:"js",
+        skill:"JavaScript",
         working:false,
         para:`The most important language for a front-ender! This makes our lives so much easier.
         `
@@ -43,7 +43,7 @@ let skills = [
         score:78,
         skill:"git",
         working:false,
-        para:`Git is one of the most well-known tools in our kit. It's one of the best reliable ways to have back-ups.`
+        para:`Git is one of the most well-known tools in our kit. It's one of the most reliable ways to have back-ups.`
     },
     {
         name:"vuejs",
@@ -65,7 +65,7 @@ let skills = [
         name:"php",
         color:"php",
         score:65,
-        skill:"php",
+        skill:"PHP",
         working:false,
         para:`PHP still has secrets for me, but I love working with it.`
     },
@@ -83,7 +83,7 @@ let skills = [
         score:80,
         skill:"jQuery",
         working:false,
-        para:`Another lovely framework that I got in touch with, just like they say, "Write less, do more.".
+        para:`Another lovely framework that I got in touch with, just like they say, "Write less, do more".
         <br>
         But lately, there are better alternatives.`
     },
@@ -93,7 +93,7 @@ let skills = [
         score:75,
         skill:"PS",
         working:false,
-        para:`Photoshop is reasonably easy for me to use. Want some edits? Or maybe add a colleague that was absent when our group picture was taken? 
+        para:`Photoshop is reasonably easy for me to use. Want some edits? Or maybe add a colleague that was absent when your group picture was taken? 
         <br>
         The sky is the limit!`
     },
@@ -103,7 +103,7 @@ let skills = [
         score:60,
         skill:"Ai",
         working:false,
-        para:`I might not make vector art in my daily life, but I know Illustrator enough to make basic designs/vector art.`
+        para:`I know Illustrator well enough to make basic designs and vector art.`
     },
     
 ]
