@@ -939,25 +939,27 @@ html {
   @media only screen and (min-width: 62rem) {
     .card__outer {
       height: 35rem; } }
-  .card__outer:hover {
-    flex-grow: 50;
-    height: 48rem;
-    width: 22rem; }
-    @media only screen and (min-width: 62rem) {
-      .card__outer:hover {
-        width: 20rem;
-        height: 45rem; } }
-    .card__outer:hover .card__container {
-      width: 8rem;
-      margin: auto;
-      font-size: 4rem; }
-    .card__outer:hover .skills__para {
-      transform: scaleY(1);
-      opacity: 1; }
-    .card__outer:hover .currently {
-      font-size: .7rem;
-      width: 13rem;
-      top: 50px; }
+  @media only screen and (min-width: 36rem) {
+    .card__outer:hover {
+      flex-grow: 50;
+      height: 48rem;
+      width: 22rem; } }
+  @media only screen and (min-width: 36rem) and (min-width: 62rem) {
+    .card__outer:hover {
+      width: 20rem;
+      height: 45rem; } }
+  @media only screen and (min-width: 36rem) {
+      .card__outer:hover .card__container {
+        width: 8rem;
+        margin: auto;
+        font-size: 4rem; }
+      .card__outer:hover .skills__para {
+        transform: scaleY(1);
+        opacity: 1; }
+      .card__outer:hover .currently {
+        font-size: .7rem;
+        width: 13rem;
+        top: 50px; } }
 
 .card__skills {
   transition-property: height,width;
